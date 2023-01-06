@@ -1,0 +1,114 @@
+.pageTitle {
+    font-size: 60px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(74, 20, 128);
+    text-decoration: none;
+}
+nav ul {
+    background-color: #1f1e33;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 9px 20px;
+    text-decoration: none;
+}
+nav ul li a:link, nav ul li a:visited {
+    color: #f1f1f1;
+}
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #1f1e33;
+}
+.active {
+    background-color: rgb(74, 20, 128);
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.pageContent {
+    text-align: center;
+    font-size: 18px;
+    color: #1f1e33;
+    margin: 10px;
+    padding: 10px;
+    border-style: none solid;
+    border-width: 5px;
+    border-color: #1f1e33;
+    flex: 1;
+}
+.pageContent .pageInfo {
+    font-family: 'Open Sans', 'Hahmlet', sans-serif;
+    line-height: 2.5;
+}
+.semiTitle {
+    font-family: 'Orbitron', 'Hahmlet', sans-serif;
+    color: rgb(67, 21, 112);
+    font-size: 40px;
+}
+form * {
+    font-family: 'Orbitron', 'Hahmlet', sans-serif;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+form input {
+    border: solid 2px #1f1e33;
+    color: #1f1e33;
+    width: 200px;
+}
+form input[type="button"] {
+    border: solid 2px #1f1e33;
+    background-color: rgb(74, 20, 128);
+    color: #f1f1f1;
+    width: 60px;
+}
+form input[type="button"]:hover {
+    background-color: #f1f1f1;
+    color: rgb(74, 20, 128);
+}
+footer {
+    text-align: center;
+    font-family: 'Open Sans', 'Hahmlet', sans-serif;
+    height: 38px;
+    font-size: 12px;
+    margin: 0px;
+    padding: 9px 20px;
+    background-color: #1f1e33;
+    color: #f1f1f1;
+    clear: both;
+}
+footer::first-line {
+    font-size: 130%;
+}
+@media screen and (max-width:650px) {
+    .pageTitle {
+        font-size: 10vw;
+    }
+    nav ul li a {
+        font-size: 3.5vw;
+        padding: 9px 20px;
+    }
+    .semiTitle {
+        font-size: 7vw;
+    }
+    .pageContent {
+        border-width: 3px;
+    }
+}

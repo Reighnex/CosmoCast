@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmo Cast</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hahmlet' rel='stylesheet'>
+    <link rel="stylesheet" href="data/css/titleCSS.css">
+    <link rel="stylesheet" href="data/css/aeisCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="data/js/aeisJS.js"></script>
+</head>
+<body>
+    <header>
+        <a class="pageTitle" href="home.html"><h1 class="pageTitle">Cosmo Cast</h1></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="apod.html">APOD</a></li>
+            <li><a class="active" href="aeis.html">AEIS</a></li>
+            <li><a href="mrp.html">MRP</a></li>
+            <li style="float:right"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section class="pageContent">
+        <h1 class="semiTitle">Astro Event Info Service</h1>
+        <p class="pageInfo">
+            <b>이번 달의 대표 천문현상과 함께, 관측될 여러 천문현상들을 알려드립니다.</b><br>
+            검색일을 지정하면, 과거에 관측되었던, 또는 미래에 관측될 천문현상들도 알아볼 수 있습니다.<br>
+            그럼, 이번 달의 천문현상을 알아봅시다.
+        </p>
+        <form name="aeisParam" action="#">
+            <input type="month" name="month" id="month" value="" min="2015-01" max="">
+            <script>
+                document.getElementById("month").setAttribute("max", curYear + "-12");
+                document.getElementById("month").setAttribute("value", curYear + "-" + curMonth);
+            </script>
+            <input type="button" id="getAeis" value="OK">
+        </form><br>
+        <fieldset class="monthlyEvent">
+            <legend id="MEmonth"></legend>
+            <h2 id="MEtitle"></h2>
+            <p id="MEinfo"></p>
+        </fieldset>
+        <section class="divContainer">
+            <div class="aeisDiv" id="div1">
+                <p id="date1"></p>
+                <p id="event1"></p>
+            </div>
+            <div class="aeisDiv" id="div2">
+                <p id="date2"></p>
+                <p id="event2"></p>
+            </div>
+            <div class="aeisDiv" id="div3">
+                <p id="date3"></p>
+                <p id="event3"></p>
+            </div>
+            <div class="aeisDiv" id="div4">
+                <p id="date4"></p>
+                <p id="event4"></p>
+            </div>
+            <div class="aeisDiv" id="div5">
+                <p id="date5"></p>
+                <p id="event5"></p>
+            </div>
+            <div class="aeisDiv" id="div6">
+                <p id="date6"></p>
+                <p id="event6"></p>
+            </div>
+            <div class="aeisDiv" id="div7">
+                <p id="date7"></p>
+                <p id="event7"></p>
+            </div>
+            <div class="aeisDiv" id="div8">
+                <p id="date8"></p>
+                <p id="event8"></p>
+            </div>
+            <div class="aeisDiv" id="div9">
+                <p id="date9"></p>
+                <p id="event9"></p>
+            </div>
+            <div class="aeisDiv" id="div10">
+                <p id="date10"></p>
+                <p id="event10"></p>
+            </div>
+        </section>
+        <ul class="pages">
+            <li id="page1"><button onclick="changePage(1)">1</button></li>
+            <li id="page2"><button onclick="changePage(2)">2</button></li>
+            <li id="page3"><button onclick="changePage(3)">3</button></li>
+            <li id="page4"><button onclick="changePage(4)">4</button></li>
+            <li id="page5"><button onclick="changePage(5)">5</button></li>
+        </ul>
+    </section>
+    <footer>
+        이 페이지는 한국천문연구원의 Open API를 사용합니다.<br>
+        &copy;2022. ParkTaehoon all rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmo Cast</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hahmlet' rel='stylesheet'>
+    <link rel="stylesheet" href="data/css/titleCSS.css">
+    <link rel="stylesheet" href="data/css/apodCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="data/js/apodJS.js"></script>
+</head>
+<body>
+    <header>
+        <a class="pageTitle" href="home.html"><h1 class="pageTitle">Cosmo Cast</h1></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a class="active" href="apod.html">APOD</a></li>
+            <li><a href="aeis.html">AEIS</a></li>
+            <li><a href="mrp.html">MRP</a></li>
+            <li style="float:right"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section class="pageContent">
+        <h1 class="semiTitle">Astronomy Picture Of Day</h1>
+        <p class="pageInfo">
+            <b>매일 천문학적 사진 한 장과 함께 설명을 제공해 드립니다.</b><br>
+            가끔 움직이는 사진이나 영상이 제공되기도 합니다.<br>
+            검색일을 지정하면, 과거 제공되었던 사진 또한 감상할 수 있습니다.<br>
+            그럼, 오늘의 사진을 확인해 봅시다.
+        </p>
+        <form name="apodParam">
+            <input type="date" name="date" id="date" value="" min="1995-06-16" max="">
+            <script>
+                document.getElementById("date").setAttribute("max", today);
+                document.getElementById("date").setAttribute("value", today);
+            </script>
+            <input type="button" id="getApod" value="OK">
+        </form><br>
+        <div id="apodDiv">
+            <h2 class="apod" id="title"></h2>
+            <img class="apod" id="image" src="">
+            <iframe class="'apod" id="video" src=""></iframe>
+            <p class="apod" id="explanation"></p>
+            <p class="apod" id="copyright"></p>
+        </div>
+    </section>
+    <footer>
+        이 페이지는 NASA의 Open API를 사용합니다.<br>
+        &copy;2022. ParkTaehoon all rights reserved.
+    </footer>
+</body>
+</html>

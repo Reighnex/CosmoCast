@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmo Cast</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hahmlet' rel='stylesheet'>
+    <link rel="stylesheet" href="data/css/titleCSS.css">
+    <link rel="stylesheet" href="data/css/mrpCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="data/js/mrpJS.js"></script>
+</head>
+<body>
+    <header>
+        <a class="pageTitle" href="home.html"><h1 class="pageTitle">Cosmo Cast</h1></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="apod.html">APOD</a></li>
+            <li><a href="aeis.html">AEIS</a></li>
+            <li><a class="active" href="mrp.html">MRP</a></li>
+            <li style="float:right"><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <section class="pageContent">
+        <h1 class="semiTitle">Mars Rover Photos</h1>
+        <p class="pageInfo">
+            <b>NASA의 화성탐사 로버가 찍은 최신 사진 자료를 제공해 드립니다.</b><br>
+            검색일을 지정하면, 로버가 이전에 찍었던 사진 또한 감상할 수 있습니다.<br>
+            그럼, 화성탐사 로버의 최신 사진을 확인해 봅시다.
+        </p>
+        <form name="mrpParam" action="#">
+            <input type="date" name="earth_date" id="earth_date" value="" min="2012-08-06" max="">
+            <script>
+                document.getElementById("earth_date").setAttribute("max", maxDate);
+                document.getElementById("earth_date").setAttribute("value", maxDate);
+            </script>
+            <input type="button" id="getMrp" value="OK">
+        </form><br>
+        <section class="divContainer">
+            <h2 class="mrp" id="title"></h2>
+            <div class="mrpDiv">
+                <img class="mrp" id="image0" src="">
+                <p class="mrp" id="info0"></p>
+            </div>
+            <div class="mrpDiv">
+                <img class="mrp" id="image1" src="">
+                <p class="mrp" id="info1"></p>
+            </div>
+            <div class="mrpDiv">
+                <img class="mrp" id="image2" src="">
+                <p class="mrp" id="info2"></p>
+            </div>
+            <div class="mrpDiv">
+                <img class="mrp" id="image3" src="">
+                <p class="mrp" id="info3"></p>
+            </div>
+        </section>
+    </section>
+    <footer>
+        이 페이지는 NASA의 Open API를 사용합니다.<br>
+        &copy;2022. ParkTaehoon all rights reserved.
+    </footer>
+</body>
+</html>
